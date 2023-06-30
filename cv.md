@@ -19,7 +19,7 @@ I am second-year student of CFU. I don't have any work experience yet, but I am 
 
 ## Code examples
 One of my solutions from Codewars:
-'''
+```
 using System;
 using System.Text;
 
@@ -40,7 +40,7 @@ public class Kata
     return Convert.ToInt32(buf.ToString());
   }
 }
-'''
+```
 
 ## Education
 * In 2021 entered CFU, software engineering faculty.
@@ -50,7 +50,7 @@ public class Kata
 
 
 ## Projects
-Training course project "CFU-maps" (GitHub: https://github.com/JustBlood/UniversityMap)
+Training course project "CFU-maps" ([GitHub](https://github.com/JustBlood/UniversityMap))
 
 ## English
 My English level: A2
