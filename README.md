@@ -1,1 +1,1 @@
-# rsschool-cv
+https://Timiry.github.io/rsschool-cv/cv
