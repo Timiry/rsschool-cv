@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <title>CV</title>
+    <title>CV - Irina Timchenko</title>
 </head>
 <body>
-    <h1>CV</h1>
-    <h2>Irina Timchenko</h2>
+    <div class="conteiner">
+    <header>
+        <nav>
+            <ul>
+                <li>about me</li>
+                <li>skills</li>
+                <li>education</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img id="photo" src="img/my_photo.jpg" alt="here must be my photo">
+        <h1>Irina Timchenko</h1>
+        <h3>Junior frontend developer</h3>
+
+        <section class="contacts">
+            <h2>Contacts</h2>
+            <ul>
+                <li>Location: Crimea, Simferopol</li>
+                <li>E-mail: irina.v.tim@gmail.com</li>
+                <li>GitHub: <a href="https://github.com/Timiry">Timiry</a></li>
+            </ul>
+        </section>
+        
+        <section class="about_me">
+            <h2>About me</h2>
+            <p>I am second-year student of CFU. I don’t have any work experience yet, but I am actively studying both at the university and on my own. I am interested in frontend because I like to create something beautiful and immediately see the result of my work. I am responsible for my work, I try to do it on time and I know how to work in a team. My goal is to get enough knowledge and experience to get a job as a frontend developer.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS</li>
+                <li>C#, C++</li>
+                <li>Python</li>
+                <li>Git, GitHub</li>
+                <li>Figma</li>
+            </ul>
+        </section>
+        
+        <section class="code">
+            <h2>Code examples</h2>
+            <p>One of my solutions from Codewars:</p>
+            <code><pre>
+using System;
+using System.Text;
+
+public class Kata
+{
+  public static int SquareDigits(int n)
+  {
+    if(n == 0) return 0;
+    StringBuilder buf = new StringBuilder();
+    int a;
+    while (n > 0)
+    {
+      a = n % 10;
+      a = a*a;
+      n /= 10;
+      buf.Insert(0, a.ToString());
+    }
+    return Convert.ToInt32(buf.ToString());
+  }
+}
+            </pre></code>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>In 2021 entered CFU, software engineering faculty.</li>
+                <li>Courses on Stepik:
+                    <ul>
+                        <li><a href="https://stepik.org/cert/1245864">Introduction to programming (C++)</a></li>
+                        <li><a href="https://stepik.org/cert/1536123">Web development for beginners: HTML and CSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Training course project “CFU-maps” <a href="https://github.com/JustBlood/UniversityMap">(GitHub)</a></li>
+            </ul>
+        </section>
+        
+        <section class="english">
+            <h2>English</h2>
+            <p>My English level: A2</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://github.com/Timiry">
+            <img id="github" src="img/github.png">
+        </a>
+        <span>2023</span>
+        <a href="https://rs.school/js/">
+            <img id="rss" src="img/rs_school_js.svg">
+        </a>
+    </footer>
+    </div>
 </body>
 </html>
