@@ -1,3 +1,85 @@
-* {
-    margin:auto;
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.conteiner{
+    margin: 20px auto;
+    width: 75%;
+    max-width: 900px;
+    min-width: 650px;
+    background-color: rgb(239, 216, 213);
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.23);
+}
+
+a{
+    color:rgba(47, 63, 47, 0.738);
+}
+
+h1, h2, h3{
+    font-weight: normal;
+}
+
+header{
+    width: 60%;
+    float: right;
+}
+
+nav{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header ul a{
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+main{
+    padding: 20px 55px;
+}
+
+.left_col{
+    width: 40%;
+    float: left;
+}
+
+#name{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.right_col{
+    width: 55%;
+    float: right;
+}
+
+h2{
+    border-bottom: 2px solid rgba(47, 63, 47, 0.738);
+}
+
+footer{
+    width: 100%;
+    background-color: rgba(47, 63, 47, 0.738);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+#photo{
+    width: 90%;
+    margin: 0 auto;
+    border: 10px solid rgba(47, 63, 47, 0.738);
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.23);
+}
+
+#github, #rss{
+    height: 80px;
 }
