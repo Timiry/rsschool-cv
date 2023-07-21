@@ -39,7 +39,7 @@ body{
 
 header{
     height: 90px;
-    background-color: black;
+    background: #0C0C0E;
 }
 
 header .wrapper{
@@ -94,8 +94,46 @@ nav a:hover{
 .profile{
     height: 28px;
     margin: 31px 20px 31px 25px;
-
 }
 
+#welcome{
+    background: url("img/Welcome.jpg") no-repeat center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    position:absolute;
+}
 
+.welcome-overlay{
+    height: 300px;
+    background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%);
+    width: 100%;
+    position: absolute;
+}
+
+.welcome-text{
+    display: flex;
+    width: 600px;
+    height: 220px;
+    padding: 35px 40px;
+    margin: 220px 0 0 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    background: #0C0C0E;
+}
+
+.welcome-text span, .welcome-text h2{
+    color: #FFF;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 125% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+}
 
