@@ -31,6 +31,9 @@
     --my_white: #FFFFFF;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Inter', sans-serif;
@@ -52,7 +55,7 @@ h2{
     margin: 20px auto;
 }
 
-.title hr{
+.section-title hr{
     width: 50px;
     text-align: center;
     border: none;
@@ -255,13 +258,13 @@ input[name="season"]:checked + label{
     font-weight: 700;
 }
 
-.favorites-items{
+.favorites-books{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.item{
+.favorites-item{
     width: 550px;
     height: 555px;
     border: solid 1px #000;
@@ -349,4 +352,81 @@ input[name="season"]:checked + label{
 
 .spring-favorites, .summer-favorites, .autumn-favorites{
     display: none;
+}
+
+#coffee_shop .section-description{
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.menu{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.coffee-tea, .desserts{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 438px;
+    height: 520px;
+}
+
+.desserts{
+    width: 461px;
+}
+
+.menu-title{
+    color: var(--my_brown);
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-item hr{
+    width: 100px;
+    height: 1px;
+    margin: 0;
+    display: inline;
+    align-self: center;
+    border: none;
+    border-top: solid 1px var(--my_brown);
+}
+
+.menu-item span{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-item-price{
+    font-family: Forum;
+}
+
+.coffee-tea .menu-item-name{
+    width: 200px;
+}
+
+.desserts .menu-item-name{
+    width: 212px;
+    text-align: right;
+}
+
+.desserts .menu-title{
+    text-align: right;
 }
