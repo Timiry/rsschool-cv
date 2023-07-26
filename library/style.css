@@ -363,7 +363,7 @@ input[name="season"]:checked + label{
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .coffee-tea, .desserts{
@@ -429,4 +429,42 @@ input[name="season"]:checked + label{
 
 .desserts .menu-title{
     text-align: right;
+}
+
+.contacts-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.text-info{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contacts-info h4{
+    margin: 0;
+}
+
+p.tel{
+    margin: 30px 0;
+    line-height: 60px;
+}
+
+.contacts-info a{
+    text-decoration: none;
+    color: #000;
+}
+
+a[href^="mailto:"]{
+    font-weight: 700;
+}
+
+.contacts-info a:hover{
+    color:var(--my_brown);
+    transition: ease 0.2s;
 }
