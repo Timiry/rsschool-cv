@@ -638,6 +638,14 @@ footer hr{
 
     font-size: 20px;
     font-style: normal;
-    /* line-height: 40px; 200% */
     letter-spacing: 2px;
+}
+
+.rss-footer *{
+    width: 301px;
+    margin: 0;
+}
+
+.rss-footer a{
+    text-align: end;
 }
