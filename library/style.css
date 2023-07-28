@@ -491,8 +491,8 @@ a[href^="mailto:"]{
 }
 
 .form-find-card{
-    margin: 30px 0 40px 0;
-    padding-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 25px;
     border: 3px solid var(--my_brown); 
 }
 
@@ -500,6 +500,7 @@ a[href^="mailto:"]{
     background-color: var(--my_brown);
     margin: 20px;
     padding-bottom: 1px;
+    height: 272px;
 }
 
 .find-card h4{
@@ -576,4 +577,67 @@ a[href^="mailto:"]{
 
 .get-card .button{
     margin-left: 20px;
+}
+
+footer{
+    background-color: var(--my_black);
+    width: 100%;
+    color: #FFF;
+}
+
+footer a{
+    text-decoration: none;
+    color:#FFF;
+}
+
+footer a:hover{
+    color: var(--my_brown);
+    transition: ease 0.3s;
+}
+
+.sub-footer{
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+}
+
+.footer-contacts, .schedule{
+    margin-top: 20px;
+}
+
+.social-media a{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 18px 12px 0 0;
+}
+
+
+.mon-fri, .sat-sun{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.schedule span{
+    text-align: right;
+}
+
+footer hr{
+    margin: 20px 0 0 0;
+}
+
+.rss-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 44px 0;
+
+    font-size: 20px;
+    font-style: normal;
+    /* line-height: 40px; 200% */
+    letter-spacing: 2px;
 }
