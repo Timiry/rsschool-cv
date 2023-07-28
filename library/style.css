@@ -1,0 +1,658 @@
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src:
+        url('../fonts/Inter-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Inter-Bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Forum';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src:
+        url('../fonts/Forum-Regular.ttf') format('truetype')
+}
+
+:root{
+    --my_black: #0C0C0E;
+    --my_brown: #BB945F;
+    --my_grey: #8E8E8E;
+    --my_white: #FFFFFF;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0;
+}
+
+h2{
+    color: var(--my_black);
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.section-title hr{
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-top: solid 1px #000;
+}
+
+.wrapper{
+    width: 1400px;
+    margin:auto;
+}
+
+header{
+    height: 90px;
+    background: var(--my_black);
+}
+
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: var(--my_white);
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+    margin: 20px 0;
+    display: inline;
+}
+
+.header-wrapper{
+    display: flex;
+}
+
+nav{
+    display: inline;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--my_white);
+    font-size: 20px;
+    font-style: normal;
+    line-height: 50px; /* 250% */
+    padding: 20px 15px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.4s linear;
+}
+
+nav a:hover{
+    border-top: 1px solid var(--my_white);
+    border-bottom: 1px solid var(--my_white);
+}
+
+.profile{
+    height: 28px;
+    margin: 31px 0 31px 25px;
+}
+
+#welcome{
+    background: url("img/Welcome.jpg") no-repeat center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+}
+
+.welcome-overlay{
+    height: 300px;
+    background: linear-gradient(180deg, var(--my_black) 0%, var(--my_black) 0.01%, #1212151a 100%);
+    width: 100%;
+}
+
+#welcome .wrapper{
+    padding-top: 220px;
+    width: 1440px;
+}
+
+.welcome-text{
+    display: flex;
+    width: 520px;
+    padding: 35px 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    background: var(--my_black);
+}
+
+.welcome-text span, .welcome-text h2{
+    color: var(--my_white);
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 125% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.section-description{
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    margin-top: 40px;
+}
+
+.photo-carousel{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photos{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1400px;
+}
+
+.carousel-pagination{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 35px 0;
+}
+
+.button-circle{
+    background: var(--my_black);
+    border-radius: 1em;
+    height: 16px;
+    width: 16px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-wrapper{
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.carousel-pagination #active{
+    background: var(--my_brown);
+}
+
+p.pick-season{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+.seasons-radio{
+    font-size: 20px;
+    margin: 35px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.radio-wrapper{
+    display: flex;
+    align-items: flex-end;
+    padding: 5px 30px 5px 0;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.seasons-radio label{
+    cursor: pointer;
+}
+
+input[name="season"]{
+    cursor: pointer;
+    margin: 0 20px 0 0;
+    width: 17px;
+    height: 17px;
+    accent-color: #000;
+}
+
+input[name="season"]:checked + label{
+    font-weight: 700;
+}
+
+.favorites-books{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.favorites-item{
+    width: 550px;
+    height: 555px;
+    border: solid 1px #000;
+    margin: 0 40px 40px 0;
+}
+
+.item-wrapper{
+    margin-left: 20px;
+}
+
+.staff-picks p{
+    font-family: Forum;
+    font-size: 20px;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    margin: 15px 0 0 0;
+}
+
+.staff-picks hr{
+    width: 60px;
+    background-color: var(--my_brown);
+    float: left;
+    margin: 0;
+    border: none;
+    border-top: solid 1px var(--my_brown);
+}
+
+.book-title{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.book-title span{
+    text-transform: uppercase;
+}
+
+.book-description{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 266.667% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    width: 355px;
+    height: 320px;
+}
+
+.button, .button-own{
+    width: 75px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid var(--my_black);
+    background-color: #FFFFFF;
+    color: var(--my_black);
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.button:hover, .btn-check-card:hover{
+    border: 1px solid var(--my_brown);
+    background: var(--my_brown);
+    transition: ease 0.3s;
+}
+
+.button-own{
+    border: 1px solid var(--my_brown);
+    color: var(--my_brown);
+    cursor: default;
+}
+
+.book-img{
+    float: right;
+    position: relative;
+    bottom: 255px;
+    left: 40px;
+}
+
+.spring-favorites, .summer-favorites, .autumn-favorites{
+    display: none;
+}
+
+#coffee_shop .section-description{
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.menu{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.coffee-tea, .desserts{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 438px;
+    height: 520px;
+}
+
+.desserts{
+    width: 461px;
+}
+
+.menu-title{
+    color: var(--my_brown);
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-item hr{
+    width: 100px;
+    height: 1px;
+    margin: 0;
+    display: inline;
+    align-self: center;
+    border: none;
+    border-top: solid 1px var(--my_brown);
+}
+
+.menu-item span{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-item-price{
+    font-family: Forum;
+}
+
+.coffee-tea .menu-item-name{
+    width: 200px;
+}
+
+.desserts .menu-item-name{
+    width: 212px;
+    text-align: right;
+}
+
+.desserts .menu-title{
+    text-align: right;
+}
+
+.contacts-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 60px 0;
+
+}
+
+.text-info{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contacts-info h4{
+    margin: 0;
+}
+
+p.tel{
+    margin: 30px 0;
+    line-height: 60px;
+}
+
+.contacts-info a{
+    text-decoration: none;
+    color: #000;
+}
+
+a[href^="mailto:"]{
+    font-weight: 700;
+}
+
+.contacts-info a:hover{
+    color:var(--my_brown);
+    transition: ease 0.2s;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+
+.find-card{
+    width: 600px;
+}
+
+.find-card h3{
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    text-align: center;
+    margin:0;
+}
+
+.form-find-card{
+    margin-top: 30px;
+    padding-bottom: 25px;
+    border: 3px solid var(--my_brown); 
+}
+
+.brown-bg{
+    background-color: var(--my_brown);
+    margin: 20px;
+    padding-bottom: 1px;
+    height: 272px;
+}
+
+.find-card h4{
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+    padding: 20px;
+    margin: 0;
+}
+
+.form-find-card input{
+    display: block;
+    width: 480px;
+    padding: 8px 20px;
+    margin: 0 20px 25px 20px;
+    border: none;
+    border-radius: 10px;
+
+    color: var(--my_grey);
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+}
+
+.btn-check-card{
+    border-radius: 2px;
+    border: 1px solid var(--my_black);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 242px;
+    height: 44px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    background: #FFF;
+}
+
+.get-card{
+    width: 456px;
+}
+
+.get-card *{
+    float: right;
+}
+
+.get-card h4{
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin:0;
+}
+
+.get-card p{
+    text-align: right;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 0.4px;
+    margin: 35px 0;
+}
+
+.get-card .button{
+    margin-left: 20px;
+}
+
+footer{
+    background-color: var(--my_black);
+    width: 100%;
+    color: #FFF;
+}
+
+footer a{
+    text-decoration: none;
+    color:#FFF;
+}
+
+footer a:hover{
+    color: var(--my_brown);
+    transition: ease 0.3s;
+}
+
+.sub-footer{
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+}
+
+.footer-contacts, .schedule{
+    margin-top: 20px;
+}
+
+.social-media a{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 18px 12px 0 0;
+}
+
+.social-media ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.mon-fri, .sat-sun{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.schedule span{
+    text-align: right;
+}
+
+footer hr{
+    margin: 20px 0 0 0;
+}
+
+.rss-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 44px 0;
+
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+.rss-footer *{
+    width: 301px;
+    margin: 0;
+}
+
+.rss-footer a{
+    text-align: end;
+}
