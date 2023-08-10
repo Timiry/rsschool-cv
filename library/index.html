@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title>Brooklyn Public Library</title>
 </head>
@@ -13,7 +14,7 @@
         <div class="wrapper">
             <h1>Brooklyn Public Library</h1>
             <div class="header-wrapper">
-                <nav>
+                <nav class="main-menu">
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#favorites">Favorites</a></li>
@@ -23,6 +24,11 @@
                     </ul>
                 </nav>
                 <img class="profile" src="img/icon_profile.svg" alt="profile">
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>     
     </header>
@@ -53,6 +59,7 @@
                 </div>
                 <div class="photo-carousel">
                     <div class="photos">
+                        <img src="img/arrow_left.svg" alt="arrow left" class="arrow left">
                         <div class="card">
                             <img src="img/about_1.jpg" alt="photo1">
                         </div>
@@ -62,10 +69,17 @@
                         <div class="card">
                             <img src="img/about_3.jpg" alt="photo3">
                         </div>
+                        <img src="img/arrow_right.svg" alt="arrow right" class="arrow right">
                     </div>
                     <div class="carousel-pagination">
                         <div class="button-wrapper">
                             <button type="button" class="button-circle" id="active"></button>
+                        </div>
+                        <div class="button-wrapper">
+                            <button type="button" class="button-circle"></button>
+                        </div>
+                        <div class="button-wrapper">
+                            <button type="button" class="button-circle"></button>
                         </div>
                         <div class="button-wrapper">
                             <button type="button" class="button-circle"></button>
@@ -428,7 +442,7 @@
                 <div class="section-description">
                     <p>In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
                 </div>
-                <div class="menu">
+                <div class="shop-menu">
                     <div class="coffee-tea">
                         <div class="menu-title">
                             <span>Coffee &AMP; Tea</span>
@@ -550,8 +564,10 @@
                     <div class="get-card">
                         <h4>Get a reader card</h4>
                         <p>You will be able to see a reader card after logging into account or you can register a new account</p>
-                        <button class="button">Log in</button>
-                        <button class="button">Sign Up</button>
+                        <div class="get-card-buttons">
+                            <button class="button">Sign Up</button>
+                            <button class="button">Log in</button>
+                        </div>
                     </div>
                 </div>
             </div>
