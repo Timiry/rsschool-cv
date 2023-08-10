@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Inter';
     font-weight: 400;
     font-style: normal;
@@ -22,7 +22,7 @@
     font-display: swap;
     src:
         url('../fonts/Forum-Regular.ttf') format('truetype')
-}
+} */
 
 :root{
     --my_black: #0C0C0E;
@@ -63,7 +63,8 @@ h2{
 }
 
 .wrapper{
-    width: 1400px;
+    max-width: 1400px;
+    width: calc(100% - 40px);
     margin:auto;
 }
 
@@ -75,6 +76,7 @@ header{
 header .wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -125,13 +127,14 @@ nav a:hover{
 .profile{
     height: 28px;
     margin: 31px 0 31px 25px;
+    z-index:2;
 }
 
 #welcome{
     background: url("img/Welcome.jpg") no-repeat center;
     background-size: cover;
     height: 600px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .welcome-overlay{
@@ -142,7 +145,7 @@ nav a:hover{
 
 #welcome .wrapper{
     padding-top: 220px;
-    width: 1440px;
+    width: 100%;
 }
 
 .welcome-text{
@@ -189,7 +192,22 @@ nav a:hover{
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.arrow{
+    padding-top: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.arrow.left{
+    padding-right: 47px;
+}
+
+.arrow.right{
+    padding-left: 47px;
 }
 
 .carousel-pagination{
@@ -197,6 +215,10 @@ nav a:hover{
     align-items: center;
     flex-direction: row;
     margin: 35px 0;
+}
+
+.carousel-pagination .button-wrapper:nth-child(4), .carousel-pagination .button-wrapper:nth-child(5){
+    display: none;
 }
 
 .button-circle{
@@ -232,13 +254,15 @@ p.pick-season{
     margin: 35px 0;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
+    max-width: 700px;
 }
 
 .radio-wrapper{
     display: flex;
     align-items: flex-end;
-    padding: 5px 30px 5px 0;
-    margin-right: 60px;
+    padding: 5px 0px 5px 0;
+    /* margin-right: 60px; */
     cursor: pointer;
 }
 
@@ -361,7 +385,7 @@ input[name="season"]:checked + label{
     margin-bottom: 40px;
 }
 
-.menu{
+.shop-menu{
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
@@ -437,7 +461,7 @@ input[name="season"]:checked + label{
     display: flex;
     justify-content: space-between;
     margin: 40px 0 60px 0;
-
+    flex-wrap: wrap;
 }
 
 .text-info{
@@ -476,6 +500,7 @@ a[href^="mailto:"]{
     display: flex;
     justify-content: space-between;
     margin: 40px auto;
+    flex-wrap: wrap;
 }
 
 .find-card{
@@ -575,8 +600,10 @@ a[href^="mailto:"]{
     margin: 35px 0;
 }
 
-.get-card .button{
-    margin-left: 20px;
+.get-card-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
 }
 
 footer{
@@ -655,4 +682,175 @@ footer hr{
 
 .rss-footer a{
     text-align: end;
+}
+
+/* burgrer-menu */
+
+.menu-btn {
+	width: 45px;
+	height: 22px;
+	position: relative;
+    margin: 33px 0 0 40px;
+	z-index:2;
+    transition: all 0.5s;
+	/* overflow: hidden; */
+    display: none;
+    cursor: pointer;
+}
+
+.menu-btn span {
+	width: 45px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	/* left: 50%; */
+	/* transform: translate(-50%, -50%); */
+	background-color: #FFF;
+	transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 10px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 10px);
+}
+
+.menu-btn.active{
+    width: 32px;
+}
+
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-10%, 0%)rotate(45deg);  
+}
+.menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-10%, 0%) rotate(-45deg); 
+}
+
+.main-menu.active {
+	transform: translateX(0);
+}
+
+
+
+/* media */
+
+@media (max-width: 1400px) {
+    
+    .photos .card:nth-of-type(2), .photos div.card:nth-of-type(3){
+        display: none;
+    }
+
+    .carousel-pagination .button-wrapper:nth-child(4), .carousel-pagination .button-wrapper:nth-child(5){
+        display:inline;
+    }
+
+    .carousel-pagination{
+        margin: 18px 0 35px 0;
+    }
+
+    .photos{
+        justify-content: center;
+    }
+    
+    .arrow{
+        display: inline;
+    }
+}
+
+@media(max-width: 1250px){
+
+    .favorites-books{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contacts-info{
+        flex-direction: column;
+    }
+
+    .map{
+        align-self: center;
+        margin-top: 82px;
+    }
+}
+
+@media(max-width: 1100px){
+
+    .cards{
+        justify-content: center;
+    }
+
+    .get-card{
+        margin-top: 20px;
+        width: 600px;
+    }
+
+    .get-card p{
+        margin: 40px 0;
+    }
+    
+    .get-card *, .get-card p{
+        float:none;
+        text-align: center;
+    }
+
+    .get-card-buttons{
+        margin: 0 auto;
+    } 
+}
+
+@media(max-width: 1040px){
+
+    .menu-btn{
+        display: inline;
+    }
+
+    .main-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 332px;
+        height: 580px;
+        background: var(--my_black);
+        transform: translateX(+100%);
+        transition: transform 0.5s; 
+        z-index: 2;
+    }
+
+    .main-menu ul{
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        height: 370px;
+        margin-top: 110px;
+    }
+}
+
+@media(max-width: 965px){
+
+    .shop-menu{
+        flex-direction: column;
+    }
+
+    .desserts{
+        align-self: flex-end;
+        margin-top: 40px;
+    }
+
+    .rss-footer :first-child, .rss-footer :last-child{
+        width: 180px;
+    }
+}
+
+@media(max-width: 740px){
+
+    img.map{
+        width: 600px;
+    }
 }
