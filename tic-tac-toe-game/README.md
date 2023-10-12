@@ -1,0 +1,1 @@
+## Link to the game: [Tic-tac-toe](https://timiry.github.io/rsschool-cv/tic-tac-toe-game/)
