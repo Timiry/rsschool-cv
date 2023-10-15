@@ -8,11 +8,14 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0;
 }
 
 header{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     font: 20px Arial;
 }
 
@@ -41,10 +44,6 @@ header{
     align-items: center;
 }
 
-#modal-window-wrapper{
-    display: none;
-}
-
 #overlay{
     position: absolute;
     width: 100%;
@@ -52,9 +51,10 @@ header{
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.6);
+    display: none;
 }
 
-#modal-window{
+#modal-window-result, #modal-window-history{
     width: 400px;
     height: 300px;
     border: 1px solid black;
@@ -69,9 +69,34 @@ header{
     align-items: center;
     font: 28px Arial;
     transition: ease 0.3s;
+    display: none;
 }
 
-#btn-new-game{
+#modal-window-history{
+    width: 530px;
+    height: 500px;
+}
+
+#modal-window-history h3{
+    margin: 0;
+}
+
+.history-wrapper{
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.history-element{
+    padding: 10px;
+}
+
+#btn-history{
+    cursor: pointer;
+}
+
+#btn-new-game, #btn-close-history{
     width: 200px;
     height: 60px;
     background-color: coral;
@@ -88,5 +113,16 @@ header{
 
 footer{
     position: relative;
-    /* margin: -50px auto 0; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font: 28px Arial;
+}
+
+footer a{
+    height: 50px;
+}
+
+footer img{
+    height: 50px;
 }

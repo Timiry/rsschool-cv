@@ -8,8 +8,33 @@
     <title>Tic-tac-toe</title>
 </head>
 <body>
-    <header><h1>Let's play Tic-tac-toe!</h1></header>
+    <header>
+        <h1>Let's play Tic-tac-toe!</h1>
+        <h2 id="btn-history">Game history</h2>
+    </header>
     <main>
+        <div id="overlay"></div>
+        <div id="modal-window-result">
+            <div id="content"></div>
+            <button id="btn-new-game">New Game</button>
+        </div>
+        <div id="modal-window-history">
+            <h3>Game history</h3>
+            <div class="history-wrapper">
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+                <div class="history-element"></div>
+            </div>
+            <button id="btn-close-history">Close</button>
+        </div>
+
         <div class="area-wrapper">
             <div id="area">
                 <div class="box"></div>
@@ -22,27 +47,17 @@
                 <div class="box"></div>
                 <div class="box"></div>
             </div>
-        </div>
-
-        <div id="modal-window-wrapper">
-            <div id="overlay"></div>
-            <div id="modal-window">
-                <div id="content">Content!</div>
-                <button id="btn-new-game">New Game</button>
-            </div>
-        </div>
+        </div>        
     </main>
+
     <footer>
-        <div class="gh">
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
-        <div class="rss">
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
+        <a href="https://github.com/Timiry">
+            <img id="github" src="img/github.png" alt="my github">
+        </a>
+        <span>2023</span>
+        <a href="https://rs.school/js/">
+            <img id="rss" src="img/rs_school_js.svg" alt="rss course">
+        </a>
     </footer>
 </body>
 </html>
